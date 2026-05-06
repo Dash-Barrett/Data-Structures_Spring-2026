@@ -31,6 +31,7 @@ public:
     void deleteNode(const T& val);
     BTNode<T>* search(const T& val) const;
     BTNode<T>* search_parent(const T& val) const;
+    int count_leaves(BTNode<T>* node);
     bool empty() const;
     void print() const;
     void rotateRight(BTNode<T>*& node);

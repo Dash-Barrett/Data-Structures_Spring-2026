@@ -1,0 +1,28 @@
+#include "Sorting.hpp"
+#include <vector>
+#include <string>
+
+template <typename T>
+void print(const std::vector<T>& v) {
+    for (int i = 0; i < v.size(); i++) {
+        std::cout << v[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+
+int main() {
+    std::vector<std::string> strings {"xyz", "abc", "the", "start", "hash", "graph", "dog", "cat"};
+    // std::vector<int> ints {43, 2, -2, 94, 934};
+    
+    Sorting::mergeSort(strings);
+
+    // Sorting::mergeSort(strings);
+    // Sorting::mergeSort(ints);
+
+    // print(strings);
+    std::cout << strings[5] + strings[4] << std::endl;
+    // print(ints);
+
+    return 0;
+}

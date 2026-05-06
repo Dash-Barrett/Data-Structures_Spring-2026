@@ -304,3 +304,15 @@ void BST<T>::rotateLeft(BTNode<T>*& node){
     right_kid->left = node;
     node = right_kid;
 }
+
+template<typename T>
+int BST<T>::count_leaves(BTNode<T>* node){
+    if(!node){
+        return 0;
+    }
+    if(node->isLeaf()){
+        return 1;
+    }
+    
+    return count_leaves(node->left) + count_leaves(node->right);
+}
